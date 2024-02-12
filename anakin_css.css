@@ -162,4 +162,12 @@
     bottom: 66px;
     opacity: 0;
 }
+.fight-stick .arrows {
+    position: absolute;
+    width: 70px;
+    height: 217px;
+    top: 53px;
+    left: 49px;
+    opacity: 0;
+}
 /*END Fight Stick Controller Styling*/
