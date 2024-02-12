@@ -131,4 +131,10 @@
     background-position-x: -1102px;
 }
 
+.fight-stick .bumper.right {
+    float: left;
+	opacity: 0;
+}
+
+
 /*END Fight Stick Controller Styling*/
