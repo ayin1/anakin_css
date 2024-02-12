@@ -76,18 +76,18 @@
 }
 
 .fight-stick .b {
-    bottom: 66px;
+    bottom: -6px;
     right: 31px;
 }
 
 .fight-stick .x {
-    top: 66px;
-    left: 33px
+    top: 70px;
+    left: 0px;
 }
 
 .fight-stick .y {
-    right: 0px;
-    top: 0px;
+    right: 30px;
+    top: 70px;
 }
 
 .fight-stick .fstick {
