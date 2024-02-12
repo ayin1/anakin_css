@@ -1,94 +1,553 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="1121.8" height="533.9" viewBox="0 0 1121.8 533.9">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #1a1a1a;
-      }
+<html style="overflow: hidden; background: transparent !important;"><head>
+    <title>GamePad Viewer - The Official Controller Display &amp; Tester</title>
+    <link rel="icon" type="image/png" href="app-icon.png">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:400;src:url(/cf-fonts/s/source-sans-pro/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:400;src:url(/cf-fonts/s/source-sans-pro/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:400;src:url(/cf-fonts/s/source-sans-pro/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:400;src:url(/cf-fonts/s/source-sans-pro/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:400;src:url(/cf-fonts/s/source-sans-pro/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:400;src:url(/cf-fonts/s/source-sans-pro/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:400;src:url(/cf-fonts/s/source-sans-pro/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:700;src:url(/cf-fonts/s/source-sans-pro/5.0.11/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:700;src:url(/cf-fonts/s/source-sans-pro/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:700;src:url(/cf-fonts/s/source-sans-pro/5.0.11/cyrillic/700/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:700;src:url(/cf-fonts/s/source-sans-pro/5.0.11/greek/700/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:700;src:url(/cf-fonts/s/source-sans-pro/5.0.11/greek-ext/700/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:700;src:url(/cf-fonts/s/source-sans-pro/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:700;src:url(/cf-fonts/s/source-sans-pro/5.0.11/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:900;src:url(/cf-fonts/s/source-sans-pro/5.0.11/greek-ext/900/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:900;src:url(/cf-fonts/s/source-sans-pro/5.0.11/latin-ext/900/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:900;src:url(/cf-fonts/s/source-sans-pro/5.0.11/greek/900/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:900;src:url(/cf-fonts/s/source-sans-pro/5.0.11/vietnamese/900/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:900;src:url(/cf-fonts/s/source-sans-pro/5.0.11/latin/900/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:900;src:url(/cf-fonts/s/source-sans-pro/5.0.11/cyrillic/900/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Source Sans Pro;font-style:normal;font-weight:900;src:url(/cf-fonts/s/source-sans-pro/5.0.11/cyrillic-ext/900/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}</style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+    <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202402080301/show_ads_impl_fy2021.js?bust=31081079"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/x5WWoE57Fv0d6ATKsLDIAKnt/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-6QAkKomkqvpLp4cQIWQ+jygFIfYhWZ8e6+BssYf6OcLFi0/C1rhftlXMNkaG16WA"></script><script type="text/javascript" src="queue.js"></script>
+    <script type="text/javascript" src="gamepad.js"></script>
+    <script type="text/javascript" src="tester.js"></script>
+    <!--<script type="text/javascript" src="msgpack.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.5/dist/clipboard.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="text/javascript" src="form.js"></script>
+    <style type="text/css" id="custom-css"></style>
+    <style type="text/css" id="css-preview"></style>
+    <meta property="og:title" content="GamePad Viewer - The Official Controller Display &amp; Tester">
+    <meta name="google-site-verification" content="-0vAfpCPiEyZGlmxBu3yY7G4c_nDRa-jjxFPaIqTze4">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamepadviewer.com">
+    <meta property="og:image" content="http://gamepadviewer.com/app-icon.png">
+    <meta property="og:description" content="Show your gamepad input live on Twitch and upgrade your experience with personalized controller skins!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gamepadviewer">
+    <meta name="twitter:creator" content="@mrmcpowned">
+    <meta name="twitter:image" content="https://gamepadviewer.com/twittercard.gif">
 
-      .cls-2 {
-        fill: #fff;
-      }
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-20916585-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      .cls-3 {
-        fill: #141414;
-      }
+        gtag('config', 'UA-20916585-6');
+    </script>
 
-      .cls-4 {
-        fill: #0f0f0f;
-      }
+    <!-- Google tag (gtag.js) - GA4 Property -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CRLGW2C0DH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      .cls-5 {
-        isolation: isolate;
-      }
+        gtag('config', 'G-CRLGW2C0DH');
+    </script>
 
-      .cls-6 {
-        fill: #fcee21;
-      }
+    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6461293058804731" crossorigin="anonymous" data-checked-head="true"></script>
 
-      .cls-7 {
-        fill: #40e2a0;
-      }
+<meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
 
-      .cls-8 {
-        fill: #0071bc;
-      }
-
-      .cls-9 {
-        fill: #ff69f8;
-      }
-
-      .cls-10 {
-        fill: #39b54a;
-      }
-
-      .cls-11 {
-        fill: #7cb2e8;
-      }
-
-      .cls-12 {
-        fill: #c1272d;
-      }
-
-      .cls-13 {
-        fill: #f66;
-      }
-    </style>
-  </defs>
-  <g>
-    <g>
-      <circle cx="565.8" cy="192.5" r="72"/>
-      <circle class="cls-1" cx="565.8" cy="192.5" r="61.7"/>
-    </g>
-    <g>
-      <circle cx="720.8" cy="126.5" r="72"/>
-      <circle class="cls-1" cx="720.8" cy="126.5" r="61.7"/>
-    </g>
+<body style="overflow: hidden; background: transparent !important;">
     
     
+
     
     
-    <g>
-      <circle cx="688.8" cy="308.5" r="72"/>
-      <circle class="cls-1" cx="688.8" cy="308.5" r="61.7"/>
-    </g>
-    <g>
-      <circle cx="532.8" cy="373.5" r="72"/>
-      <circle class="cls-1" cx="532.8" cy="373.5" r="61.7"/>
-    </g>
-  </g>
-  <circle cx="303.8" cy="308.5" r="57"/>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</svg>
+
+    
+
+    
+
+    
+
+    <div class="container" id="gamepads">
+        <div class="template">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="bumpers">
+                <span class="bumper left" data-name="button-left-shoulder-top"></span>
+<body style="overflow: hidden; background: transparent !important;">
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    <div class="container" id="gamepads">
+        <div class="template">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="bumpers">
+                <span class="bumper left" data-name="button-left-shoulder-top"></span>
+                <span class="bumper right" data-name="button-right-shoulder-top"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel"></span>
+                <span class="wheel right" data-name="stick-2-wheel"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+        <div class="controller active fight-stick half" id="gamepad-0" style="transform-origin: 0px 0px;">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom" style="opacity: 0;"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom" style="opacity: 0;"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant p0"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1" style="margin-left: 0px; margin-top: 0px; transform: rotateX(0deg) rotateY(0deg);"></span>
+                <span class="stick right" data-name="stick-2" style="margin-left: 0px; margin-top: 0px; transform: rotateX(0deg) rotateY(0deg);"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel" style="transform: rotate(0deg);"></span>
+                <span class="wheel right" data-name="stick-2-wheel" style="transform: rotate(0deg);"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+        <div class="controller disconnected fight-stick half" id="gamepad-1" style="transform-origin: 0px 0px;">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="bumpers">
+                <span class="bumper left" data-name="button-left-shoulder-top"></span>
+                <span class="bumper right" data-name="button-right-shoulder-top"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel"></span>
+                <span class="wheel right" data-name="stick-2-wheel"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+        <div class="controller disconnected fight-stick half" id="gamepad-2" style="transform-origin: 0px 0px;">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="bumpers">
+                <span class="bumper left" data-name="button-left-shoulder-top"></span>
+                <span class="bumper right" data-name="button-right-shoulder-top"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel"></span>
+                <span class="wheel right" data-name="stick-2-wheel"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+        <div class="controller disconnected fight-stick half" id="gamepad-3" style="transform-origin: 0px 0px;">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="bumpers">
+                <span class="bumper left" data-name="button-left-shoulder-top"></span>
+                <span class="bumper right" data-name="button-right-shoulder-top"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel"></span>
+                <span class="wheel right" data-name="stick-2-wheel"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+    </div>
+
+   
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        tester.init();
+        gamepadSupport.init();
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-20916585-6', 'auto');
+        ga('require', 'linkid');
+        ga('send', 'pageview');
+
+    </script>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;85480a887e20b166&quot;,&quot;r&quot;:1,&quot;version&quot;:&quot;2024.2.0&quot;,&quot;token&quot;:&quot;c93c0f6d75ef4f439f5542d0a154a7a1&quot;}" crossorigin="anonymous"></script>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" process-adn="true" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6461293058804731&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1707774561&amp;plaf=1%3A2%2C2%3A2%2C7%3A2&amp;plat=1%3A128%2C2%3A128%2C3%3A128%2C4%3A128%2C8%3A128%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fgamepadviewer.com%2F%3Fp%3D1%26s%3D7&amp;pra=5&amp;wgl=1&amp;easpi=0&amp;asro=0&amp;aslmt=0.4&amp;asamt=-1&amp;aseiel=1~2~4~6~16&amp;aslcwct=150&amp;asacwct=25&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTIxLjAuMjI3Ny4xMTIiLG51bGwsMCxudWxsLCI2NCIsW1siTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdLFsiTWljcm9zb2Z0IEVkZ2UiLCIxMjEuMC4yMjc3LjExMiJdLFsiQ2hyb21pdW0iLCIxMjEuMC42MTY3LjE2MCJdXSwwXQ..&amp;dt=1707774561308&amp;bpp=1&amp;bdt=192&amp;idt=10&amp;shv=r20240208&amp;mjsv=m202402080301&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=5442437897385&amp;frm=20&amp;pv=2&amp;ga_vid=408913866.1707774561&amp;ga_sid=1707774561&amp;ga_hid=416257167&amp;ga_fc=0&amp;u_tz=-300&amp;u_his=2&amp;u_h=1440&amp;u_w=2560&amp;u_ah=1392&amp;u_aw=2560&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=2512&amp;bih=1284&amp;scr_x=0&amp;scr_y=0&amp;eid=44759875%2C44759926%2C44808397%2C44795921%2C44809003%2C95322433%2C95324580%2C31081079%2C95322195%2C95321865%2C95324155%2C95324161%2C95324262&amp;oid=2&amp;pvsid=1760319341648997&amp;tmod=1007177118&amp;wsm=1&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=-2560%2C5%2C-2560%2C5%2C2560%2C5%2C2560%2C1392%2C2512%2C1284&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1.02&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=14" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><synology-download-content id="synology-download-content-root" data-version="3.10.3" data-injection="2024-02-12T21:49:21.467Z" data-context="content-script" style="all: initial;"></synology-download-content><div id="synology-download-notification-stack" hidden="" aria-hidden="true"></div><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body>
+
+                <span class="bumper right" data-name="button-right-shoulder-top"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel"></span>
+                <span class="wheel right" data-name="stick-2-wheel"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+        <div class="controller active fight-stick half" id="gamepad-0" style="transform-origin: 0px 0px;">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom" style="opacity: 0;"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom" style="opacity: 0;"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant p0"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1" style="margin-left: 0px; margin-top: 0px; transform: rotateX(0deg) rotateY(0deg);"></span>
+                <span class="stick right" data-name="stick-2" style="margin-left: 0px; margin-top: 0px; transform: rotateX(0deg) rotateY(0deg);"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel" style="transform: rotate(0deg);"></span>
+                <span class="wheel right" data-name="stick-2-wheel" style="transform: rotate(0deg);"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+        <div class="controller disconnected fight-stick half" id="gamepad-1" style="transform-origin: 0px 0px;">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="bumpers">
+                <span class="bumper left" data-name="button-left-shoulder-top"></span>
+                <span class="bumper right" data-name="button-right-shoulder-top"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel"></span>
+                <span class="wheel right" data-name="stick-2-wheel"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+        <div class="controller disconnected fight-stick half" id="gamepad-2" style="transform-origin: 0px 0px;">
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+        </div>
+        <div class="controller disconnected fight-stick half" id="gamepad-3" style="transform-origin: 0px 0px;">
+            
+            <div class="triggers">
+                <span class="trigger left" data-name="button-left-shoulder-bottom"></span>
+                <span class="trigger right" data-name="button-right-shoulder-bottom"></span>
+                <span class="trigger-button left" data-name="button-left-shoulder-bottom-digital"></span>
+                <span class="trigger-button right" data-name="button-right-shoulder-bottom-digital"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="bumpers">
+                <span class="bumper left" data-name="button-left-shoulder-top"></span>
+                <span class="bumper right" data-name="button-right-shoulder-top"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="touchpad" data-name="touch-pad"></div>
+            <div class="quadrant"></div>
+            <div class="meta" data-name="button-meta"></div>
+            <div class="arrows">
+                <span class="back" data-name="button-select"></span>
+                <span class="start" data-name="button-start"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="abxy">
+                <span class="button a" data-name="button-1"></span>
+                <span class="button b" data-name="button-2"></span>
+                <span class="button x" data-name="button-3"></span>
+                <span class="button y" data-name="button-4"></span>
+            </div>
+            <div class="sticks">
+                <span class="stick left" data-name="stick-1"></span>
+                <span class="stick right" data-name="stick-2"></span>
+            </div>
+            <div class="wheels">
+                <span class="wheel left" data-name="stick-1-wheel"></span>
+                <span class="wheel right" data-name="stick-2-wheel"></span>
+            </div>
+            <div class="dpad">
+                <span class="face up" data-name="button-dpad-top"></span>
+                <span class="face down" data-name="button-dpad-bottom"></span>
+                <span class="face left" data-name="button-dpad-left"></span>
+                <span class="face right" data-name="button-dpad-right"></span>
+            </div>
+            <div class="fstick" data-name="arcade-stick"></div>
+        </div>
+    </div>
+
+   
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        tester.init();
+        gamepadSupport.init();
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-20916585-6', 'auto');
+        ga('require', 'linkid');
+        ga('send', 'pageview');
+
+    </script>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;85480a887e20b166&quot;,&quot;r&quot;:1,&quot;version&quot;:&quot;2024.2.0&quot;,&quot;token&quot;:&quot;c93c0f6d75ef4f439f5542d0a154a7a1&quot;}" crossorigin="anonymous"></script>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" process-adn="true" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6461293058804731&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1707774561&amp;plaf=1%3A2%2C2%3A2%2C7%3A2&amp;plat=1%3A128%2C2%3A128%2C3%3A128%2C4%3A128%2C8%3A128%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fgamepadviewer.com%2F%3Fp%3D1%26s%3D7&amp;pra=5&amp;wgl=1&amp;easpi=0&amp;asro=0&amp;aslmt=0.4&amp;asamt=-1&amp;aseiel=1~2~4~6~16&amp;aslcwct=150&amp;asacwct=25&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTIxLjAuMjI3Ny4xMTIiLG51bGwsMCxudWxsLCI2NCIsW1siTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdLFsiTWljcm9zb2Z0IEVkZ2UiLCIxMjEuMC4yMjc3LjExMiJdLFsiQ2hyb21pdW0iLCIxMjEuMC42MTY3LjE2MCJdXSwwXQ..&amp;dt=1707774561308&amp;bpp=1&amp;bdt=192&amp;idt=10&amp;shv=r20240208&amp;mjsv=m202402080301&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=5442437897385&amp;frm=20&amp;pv=2&amp;ga_vid=408913866.1707774561&amp;ga_sid=1707774561&amp;ga_hid=416257167&amp;ga_fc=0&amp;u_tz=-300&amp;u_his=2&amp;u_h=1440&amp;u_w=2560&amp;u_ah=1392&amp;u_aw=2560&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=2512&amp;bih=1284&amp;scr_x=0&amp;scr_y=0&amp;eid=44759875%2C44759926%2C44808397%2C44795921%2C44809003%2C95322433%2C95324580%2C31081079%2C95322195%2C95321865%2C95324155%2C95324161%2C95324262&amp;oid=2&amp;pvsid=1760319341648997&amp;tmod=1007177118&amp;wsm=1&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=-2560%2C5%2C-2560%2C5%2C2560%2C5%2C2560%2C1392%2C2512%2C1284&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;bz=1.02&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=14" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><synology-download-content id="synology-download-content-root" data-version="3.10.3" data-injection="2024-02-12T21:49:21.467Z" data-context="content-script" style="all: initial;"></synology-download-content><div id="synology-download-notification-stack" hidden="" aria-hidden="true"></div><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20240208/r20190131/zrt_lookup_fy2021.html?hello=world" style="display: none;"></iframe></html>
+<iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20240208/r20190131/zrt_lookup_fy2021.html?hello=world" style="display: none;"></iframe>
