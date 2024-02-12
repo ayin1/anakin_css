@@ -145,4 +145,21 @@
 .fight-stick .trigger-button.left {
 	opacity: 0;
 }
+.fight-stick .bumper {
+    width: 123px;
+    height: 123px;
+    background: #333333;
+    border-radius: 100%;
+    opacity: 0;
+    display: block;
+}
+
+.fight-stick .triggers {
+    width: 326px;
+    height: 198px;
+    position: absolute;
+    right: 0px;
+    bottom: 66px;
+    opacity: 0;
+}
 /*END Fight Stick Controller Styling*/
