@@ -136,5 +136,13 @@
 	opacity: 0;
 }
 
-
+.fight-stick .bumper.left {
+	opacity: 0;
+}
+.fight-stick .trigger-button.right {
+	opacity: 0;
+}
+.fight-stick .trigger-button.left {
+	opacity: 0;
+}
 /*END Fight Stick Controller Styling*/
