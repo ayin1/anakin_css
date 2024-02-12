@@ -1,6 +1,6 @@
 /*BEGIN Fight Stick Controller Styling*/
 .controller.fight-stick {
-    background: url(https://github.com/ayin1/anakin_css/blob/main/base.svg) center no-repeat;
+    background: url("https://github.com/ayin1/anakin_css/blob/main/base.svg") center no-repeat;
     height: 534px;
     width: 1122px;
 }
@@ -186,7 +186,7 @@
     height: 221px;
     top: 199px;
     left: 192px;
-    background: url(stick-assets/stick.svgz)
+    background: url("https://github.com/ayin1/anakin_css/blob/main/base.svg")
 }
 
 .fight-stick .fstick.up {
