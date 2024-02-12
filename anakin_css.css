@@ -1,6 +1,6 @@
 /*BEGIN Fight Stick Controller Styling*/
 .controller.fight-stick {
-    background: url(base.svg) center no-repeat;
+    background: url(my-custom.svg) center no-repeat;
     height: 534px;
     width: 1122px;
 }
@@ -186,7 +186,7 @@
     height: 221px;
     top: 199px;
     left: 192px;
-    background: url(base.svg)
+    background: url(my-custom.svg)
 }
 
 .fight-stick .fstick.up {
