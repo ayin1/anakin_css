@@ -73,6 +73,7 @@
     float: right;
     bottom: 4px;
     right: 11px;
+	opacity: 0;
 }
 
 .fight-stick .bumper.right {
