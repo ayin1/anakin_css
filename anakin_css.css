@@ -23,22 +23,6 @@
     color: white;
 }
 
-.fight-stick .p0:after {
-    content: "Player 1";
-}
-
-.fight-stick .p1:after {
-    content: "Player 2";
-}
-
-.fight-stick .p2:after {
-    content: "Player 3";
-}
-
-.fight-stick .p3:after {
-    content: "Player 4";
-}
-
 .fight-stick .back, .fight-stick .start {
     width: 70px;
     height: 70px;
