@@ -23,6 +23,19 @@
     color: white;
 }
 
+.fight-stick .p0:after {
+    content: "";
+}
+.fight-stick .p1:after {
+    content: "";
+}
+.fight-stick .p2:after {
+    content: "";
+}
+.fight-stick .p3:after {
+    content: "";
+}
+
 .fight-stick .back, .fight-stick .start {
     width: 70px;
     height: 70px;
